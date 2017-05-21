@@ -4,3 +4,8 @@ function setStatus(message)
 {
 	window.status = message;
 }
+
+function one()
+{
+	// blah
+}
