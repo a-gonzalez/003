@@ -4,3 +4,8 @@ function send(packet)
 {
 	// code to send packet
 }
+
+function add(a, b)
+{
+	return a + b;
+}
