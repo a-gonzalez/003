@@ -2,5 +2,14 @@
 
 function send(packet)
 {
-	// code to send packet
+	if (packet != null)
+	{
+		var server = new Server("Connecion Information");
+		var client = new Client();
+		client.Connect(server);
+		client.Send(packet);
+		
+		client.Dispose();
+		server.Dispose();
+	}
 }
