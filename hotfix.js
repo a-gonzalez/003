@@ -10,7 +10,20 @@ function send(packet)
 		
 		if (client.Connected == true)
 		{
-			client.Send(packet);
+			var status = client.Send(packet);
+			
+			switch (status) // 2 - received pending processing, 3 - rejected (size), 4 - rejected(format), 5 - accepted and processed, 6 - network unavailable
+			{
+				// the packet was received and processed successfully
+				case 5:
+				{
+					break;
+				}
+				default:
+				{
+					// 
+				}
+			}
 		}
 		
 		if (client != null)
