@@ -7,7 +7,11 @@ function send(packet)
 		var server = new Server("Connecion Information");
 		var client = new Client();
 		client.Connect(server);
-		client.Send(packet);
+		
+		if (client.Connected == true)
+		{
+			client.Send(packet);
+		}
 		
 		client.Dispose();
 		server.Dispose();
