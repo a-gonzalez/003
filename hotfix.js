@@ -13,7 +13,14 @@ function send(packet)
 			client.Send(packet);
 		}
 		
-		client.Dispose();
-		server.Dispose();
+		if (client != null)
+		{
+			client.Dispose();
+		}
+		
+		if (server != null)
+		{
+			server.Dispose();
+		}
 	}
 }
