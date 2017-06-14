@@ -2,6 +2,8 @@
 
 function send(packet)
 {
+	var status = null;
+	
 	if (packet != null)
 	{
 		var server = new Server("Connecion Information");
@@ -10,9 +12,9 @@ function send(packet)
 		
 		if (client.Connected == true)
 		{
-			var status = client.Send(packet);
+			status = client.Send(packet);
 			
-			switch (status) // 2 - received pending processing, 3 - rejected (size), 4 - rejected(format), 5 - accepted and processed, 6 - network unavailable
+			/*switch (status) // 2 - received pending processing, 3 - rejected (size), 4 - rejected(format), 5 - accepted and processed, 6 - network unavailable
 			{
 				// the packet was received and processed successfully
 				case 5:
@@ -23,7 +25,7 @@ function send(packet)
 				{
 					// 
 				}
-			}
+			}*/
 		}
 		
 		if (client != null)
@@ -36,4 +38,5 @@ function send(packet)
 			server.Dispose();
 		}
 	}
+	return status;
 }
