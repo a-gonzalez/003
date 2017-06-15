@@ -12,9 +12,15 @@ function send(packet)
 		
 		if (client.Connected == true)
 		{
+<<<<<<< HEAD
 			status = client.Send(packet);
 			
 			/*switch (status) // 2 - received pending processing, 3 - rejected (size), 4 - rejected(format), 5 - accepted and processed, 6 - network unavailable
+=======
+			var status = client.Send(packet);
+			
+			switch (status) // 2 - received pending processing, 3 - rejected (size), 4 - rejected(format), 5 - accepted and processed, 6 - network unavailable
+>>>>>>> c3ce4e4b1cfd03e0902857d6ec5fc66d56250a58
 			{
 				// the packet was received and processed successfully
 				case 5:
@@ -25,6 +31,7 @@ function send(packet)
 				{
 					// 
 				}
+<<<<<<< HEAD
 			}*/
 		}
 		
